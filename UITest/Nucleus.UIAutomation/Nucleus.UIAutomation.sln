@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nucleus.Service", "Nucleus.Service\Nucleus.Service.csproj", "{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nucleus.UIAutomation.TestSuites", "Nucleus.UIAutomation.TestSuites\Nucleus.UIAutomation.TestSuites.csproj", "{592AF626-CF38-490E-914C-53054052A72E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13} = {2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAutomation.Framework", "..\UIAutomationFramework\UIAutomation.Framework\UIAutomation.Framework.csproj", "{DD4264B2-7027-4CEF-A855-5990BEDA9C52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LegacyDBQA|Any CPU = LegacyDBQA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.LegacyDBQA|Any CPU.ActiveCfg = LegacyDBQA|Any CPU
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.LegacyDBQA|Any CPU.Build.0 = LegacyDBQA|Any CPU
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.LegacyDBQA|Any CPU.ActiveCfg = LegacyDBQA|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.LegacyDBQA|Any CPU.Build.0 = LegacyDBQA|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592AF626-CF38-490E-914C-53054052A72E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.LegacyDBQA|Any CPU.ActiveCfg = LegacyDBQA|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.LegacyDBQA|Any CPU.Build.0 = LegacyDBQA|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E378BACB-03FF-4C3F-AC26-A0E713BC3785}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

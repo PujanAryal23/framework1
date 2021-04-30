@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--A automation data schema -->
+<xs:schema id="AutomationTests" targetNamespace="http://www.hcinsight.net/AutomationData.xsd" xmlns:mstns="http://www.hcinsight.net/AutomationData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hcinsight.net/AutomationData.xsd" elementFormDefault="qualified">
+
+  <!--Root element Tests-->
+  <xs:element name="Tests" type="Tests" />
+
+  <!--Child elements of root element Tests-->
+  <xs:complexType name="Tests">
+    <xs:sequence>
+      <!--Element EnvironmentVariables-->
+      <xs:element name="EnvironmentVariables" type="EnvironmentVariables" minOccurs="0" maxOccurs="1" />
+
+      <!--Element Credentials-->
+      <xs:element name="Credentials" type="Credentials" minOccurs="0" maxOccurs="1" />
+
+      <!--Element TestSuite-->
+      <xs:element name="TestSuite" type="TestSuite" minOccurs ="0" maxOccurs="unbounded">
+
+        <!--FullyQualifiedClass name should be unique-->
+        <xs:unique name="UTestSuite">
+          <xs:selector xpath="mstns:FullyQualifiedClass"/>
+          <xs:field xpath="@Name"/>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--Child elements of root element TestSuite-->
+  <xs:complexType name="TestSuite">
+    <xs:sequence>
+      <!--Element FullyQualifiedClass-->
+      <xs:element name="FullyQualifiedClass" type="FullyQualifiedClass" minOccurs="1" maxOccurs="unbounded" >
+
+        <!--FullyQualifiedClass name should be unique-->
+        <xs:unique name="UFullyQualifiedClassName">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Name"/>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="Name" use="optional" type="xs:string"/>
+  </xs:complexType>
+
+  <!--Parameters of element EnvironmentVariables-->
+  <xs:complexType name="EnvironmentVariables">
+    <xs:sequence>
+      <xs:element name="Parameters" type="Parameters" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--Parameters of element Credentials having attribute IsEncrypted-->
+  <xs:complexType name="Credentials">
+    <xs:sequence>
+      <xs:element name="Parameters" type="Parameters" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="IsEncrypted" use="required" type="xs:boolean" />
+  </xs:complexType>
+
+  <!--FullyQualifiedClass contains element TestMethod and attribute Name-->
+  <xs:complexType name="FullyQualifiedClass">
+    <xs:sequence>
+      <xs:element name="TestMethod" type="TestMethod" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="Name" use="required" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="TestMethod">
+    <xs:sequence>
+      <xs:element name="Parameters" type="Parameters" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="Name" use="required" type="xs:string" />
+  </xs:complexType>
+
+  <!--Parameters contain element param-->
+  <xs:complexType name="Parameters">
+    <xs:sequence>
+      <xs:element name="Param" type="Param" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--Param contains attributes - Name,Code,Type and Client-->
+  <xs:complexType name="Param">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" use="required" type="xs:string" />
+        <xs:attribute name="Code"  type="xs:string" />
+        <xs:attribute name="Type"  type="xs:string" />
+        <xs:attribute name="Client"  type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+</xs:schema>
+

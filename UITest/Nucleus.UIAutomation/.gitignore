@@ -1,0 +1,11 @@
+Nucleus.Service/bin/*
+Nucleus.Service/bin/Debug/*
+Nucleus.Service/obj/*
+Nucleus.Service/obj/Debug/*
+Nucleus.UIAutomation.TestSuites/obj/*
+_ReSharper.Nucleus.UIAutomation/*
+*.suo
+
+
+
+

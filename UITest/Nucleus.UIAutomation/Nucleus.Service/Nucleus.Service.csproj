@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2158F34F-2D18-41E0-B6D7-1ED95EF7CB13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nucleus.Service</RootNamespace>
+    <AssemblyName>Nucleus.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\UIAutomationFramework\UIAutomation.Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LegacyDBQA|AnyCPU'">
+    <OutputPath>bin\LegacyDBQA\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="VH.EncryptionBusiness">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\VH.EncryptionBusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="Data\IDataHelper.cs" />
+    <Compile Include="Data\NewDataHelper.cs" />
+    <Compile Include="DependencyOfDependencyExtension.cs" />
+    <Compile Include="IStartNucleus.cs" />
+    <Compile Include="NewStartNucleus.cs" />
+    <Compile Include="PageObjects\Appeal\AppealCategoryManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealLetterPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealNotePageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealProcessingHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealSummaryPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealRationaleManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealActionPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Batch\BatchSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Batch\BatchSummaryPageObjects.cs" />
+    <Compile Include="PageObjects\ChromeDownLoad\NewChromeDownLoadPageObjects.cs" />
+    <Compile Include="PageObjects\ChromeDownLoad\ChromeDownLoadPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\BillActionPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\BillActionPopupObjects.cs" />
+    <Compile Include="PageObjects\Claim\InvoiceDataPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\ClaimProcessingHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\LogicSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\FlagPopupPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\ClaimSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\NewPopupCodePageObjects.cs" />
+    <Compile Include="PageObjects\Claim\OriginalClaimDataPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\PatientBillHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\BillSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\ClaimActionPopupObjects.cs" />
+    <Compile Include="PageObjects\Claim\ClaimHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\ClaimActionPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\NotesPopupPageObjects.cs" />
+    <Compile Include="PageObjects\Claim\PopupCodePageObjects.cs" />
+    <Compile Include="PageObjects\Claim\LogicManagementPageObjects.cs" />
+    <Compile Include="PageObjects\Dashboard\AppealsDetailPageObjects.cs" />
+    <Compile Include="PageObjects\Dashboard\ClaimsDetailPageObjects.cs" />
+    <Compile Include="PageObjects\Dashboard\COBAppealsDetailPageObjects.cs" />
+    <Compile Include="PageObjects\Dashboard\COBClaimsDetailpageObject.cs" />
+    <Compile Include="PageObjects\Dashboard\DashboardLogicRequestDetails.cs" />
+    <Compile Include="PageObjects\Dashboard\DashboardPageObjects.cs" />
+    <Compile Include="PageObjects\Default\DefaultPageObjects.cs" />
+    <Compile Include="PageObjects\Default\NewDefaultPageObjects.cs" />
+    <Compile Include="PageObjects\HelpCenter\HelpCenterPageObjects.cs" />
+    <Compile Include="PageObjects\Invoice\InvoiceSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Login\NewLoginPageObjects.cs" />
+    <Compile Include="PageObjects\Microstrategy\MicroStrategyPageObjects.cs" />
+    <Compile Include="PageObjects\Microstrategy\MicrostrategyReportPageObjects.cs" />
+    <Compile Include="PageObjects\PreAuthorization\PreAuthActionPageObjects.cs" />
+    <Compile Include="PageObjects\PreAuthorization\PreAuthCreatorPageObjects.cs" />
+    <Compile Include="PageObjects\PreAuthorization\PreAuthProcessingHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\PreAuthorization\PreAuthSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderActionPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\NewProviderScoreCardPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderBillHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderClaimHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderClaimSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderNotesPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderProfilePageObjects.cs" />
+    <Compile Include="PageObjects\Provider\ProviderScoreCardPageObjects.cs" />
+    <Compile Include="PageObjects\Provider\SuspectProvidersPageObjects.cs" />
+    <Compile Include="PageObjects\QA\QAAppealSearchPageObjects.cs" />
+    <Compile Include="PageObjects\QA\QAClaimSearchPageObjects.cs" />
+    <Compile Include="PageObjects\QA\QAManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Reference\ReferenceManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Report\ReportCenterPageObjects.cs" />
+    <Compile Include="PageObjects\RepositoryPageObjects.cs" />
+    <Compile Include="PageObjects\Settings\EditSettingsManagerPageObject.cs" />
+    <Compile Include="PageObjects\Settings\MicrostrategyMaintenancePageObjects.cs" />
+    <Compile Include="PageObjects\Settings\MaintenanceNoticesPageObjects.cs" />
+    <Compile Include="PageObjects\Settings\ClientSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Settings\RoleManagerPageObject.cs" />
+    <Compile Include="PageObjects\Settings\User\MyProfilePageObjects.cs" />
+    <Compile Include="PageObjects\Settings\User\UserProfileSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Settings\User\ProfileManagerPageObjects.cs" />
+    <Compile Include="PageObjects\Settings\User\OldUserProfileSearchPageObjects.cs" />
+    <Compile Include="PageObjects\SwitchClient\SwitchClientPageObjects.cs" />
+    <Compile Include="PageObjects\Appeal\AppealCreatorPageObjects.cs" />
+    <Compile Include="PageServices\Appeal\AppealCreatorPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealLetterPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealManagerPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealNotePage.cs" />
+    <Compile Include="PageServices\Appeal\AppealCategoryManagerPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealProcessingHistoryPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealSummaryPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealRationaleManagerPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealActionPage.cs" />
+    <Compile Include="PageServices\Appeal\AppealSearchPage.cs" />
+    <Compile Include="PageServices\Base\Default\NewDefaultPage.cs" />
+    <Compile Include="PageServices\Base\NewBasePageService.cs" />
+    <Compile Include="PageServices\Batch\BatchSearchPage.cs" />
+    <Compile Include="PageServices\Batch\BatchSummaryPage.cs" />
+    <Compile Include="PageServices\ChromeDownLoad\ChromeDownloadPage.cs" />
+    <Compile Include="PageServices\Claim\BillActionPage.cs" />
+    <Compile Include="PageServices\Claim\BillActionPopup.cs" />
+    <Compile Include="PageServices\Claim\InvoiceDataPage.cs" />
+    <Compile Include="PageServices\Claim\FlagPopupPage.cs" />
+    <Compile Include="PageServices\Claim\ClaimProcessingHistoryPage.cs" />
+    <Compile Include="PageServices\Claim\ClaimSearchPage.cs" />
+    <Compile Include="PageServices\Claim\LogicSearchPage.cs" />
+    <Compile Include="PageServices\Claim\NewPopupCodePage.cs" />
+    <Compile Include="PageServices\Claim\PatientBillHistoryPage.cs" />
+    <Compile Include="PageServices\Claim\BillSearchPage.cs" />
+    <Compile Include="PageServices\Claim\ClaimActionPopup.cs" />
+    <Compile Include="PageServices\Claim\ClaimHistoryPage.cs" />
+    <Compile Include="PageServices\Claim\ClaimActionPage.cs" />
+    <Compile Include="PageServices\Claim\NotesPopupPage.cs" />
+    <Compile Include="PageServices\Claim\PopupCodePage.cs" />
+    <Compile Include="PageServices\Claim\LogicManagementPage.cs" />
+    <Compile Include="PageServices\Dashboard\AppealsDetailPage.cs" />
+    <Compile Include="PageServices\Dashboard\ClaimsDetailPage.cs" />
+    <Compile Include="PageServices\Dashboard\COBAppealsDetailPage.cs" />
+    <Compile Include="PageServices\Dashboard\COBClaimsDetailPage.cs" />
+    <Compile Include="PageServices\Dashboard\DashboardLogicReuqestsDetailPage.cs" />
+    <Compile Include="PageServices\Dashboard\DashboardPage.cs" />
+    <Compile Include="PageServices\HelpCenter\HelpCenterPage.cs" />
+    <Compile Include="PageServices\Invoice\InvoiceSearchPage.cs" />
+    <Compile Include="PageServices\Microstrategy\MicrostrategyPage.cs" />
+    <Compile Include="PageServices\Microstrategy\MicrostrategyReportPage.cs" />
+    <Compile Include="PageServices\PreAuthorization\PreAuthActionPage.cs" />
+    <Compile Include="PageServices\PreAuthorization\PreAuthCreatorPage.cs" />
+    <Compile Include="PageServices\PreAuthorization\PreAuthProcessingHistoryPage.cs" />
+    <Compile Include="PageServices\PreAuthorization\PreAuthSearchPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderActionPage.cs" />
+    <Compile Include="PageServices\Provider\NewProviderScoreCardPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderSearchPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderBillHistory.cs" />
+    <Compile Include="PageServices\Provider\ProviderClaimHistoryPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderClaimSearchPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderNotesPage.cs" />
+    <Compile Include="PageServices\Provider\ProviderProfilePage.cs" />
+    <Compile Include="PageServices\Provider\ProviderScoreCardPage.cs" />
+    <Compile Include="PageServices\Provider\SuspectProvidersPage.cs" />
+    <Compile Include="PageServices\QA\QAAppealSearchPage.cs" />
+    <Compile Include="PageServices\QA\QAClaimSearchPage.cs" />
+    <Compile Include="PageServices\QA\QAManagerPage.cs" />
+    <Compile Include="PageServices\Reference\ReferenceManagerPage.cs" />
+    <Compile Include="PageServices\Reference\RepositoryPage.cs" />
+    <Compile Include="PageServices\Report\ReportCenterPage.cs" />
+    <Compile Include="PageServices\Settings\EditSettingsManagerPage.cs" />
+    <Compile Include="PageServices\Settings\MicrostrategyMaintenancePage.cs" />
+    <Compile Include="PageServices\Settings\MaintenanceNoticesPage.cs" />
+    <Compile Include="PageServices\Settings\ClientSearchPage.cs" />
+    <Compile Include="PageServices\Settings\RoleManagerPage.cs" />
+    <Compile Include="PageServices\Settings\User\MyProfilePage.cs" />
+    <Compile Include="PageServices\Settings\User\UserProfileSearchPage.cs" />
+    <Compile Include="PageServices\Settings\User\ProfileManagerPage.cs" />
+    <Compile Include="PageServices\Settings\User\OldUserProfileSearchPage.cs" />
+    <Compile Include="PageServices\SwitchClient\SwitchClientPage.cs" />
+    <Compile Include="SqlScriptObjects\Appeal\AppealSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\Batch\BatchSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\Claim\ClaimSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\Common SQL\CommonSQLObjects.cs" />
+    <Compile Include="SqlScriptObjects\Dashboard\DashboardSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\EditSettingsManager\EditSettingsManagerSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\HelpCenter\HelpCenterSqlScripts.cs" />
+    <Compile Include="SqlScriptObjects\Invoice\InvoiceSearchSqlScripts.cs" />
+    <Compile Include="SqlScriptObjects\Logic\LogicSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\MicroStrategy\MicrostrategySqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\Pre-Auth\PreAuthSQLScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\Provider\ProviderSqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\QA\QASqlScriptObjects.cs" />
+    <Compile Include="SqlScriptObjects\References\ReferenceManagerSqlScriptsObjects.cs" />
+    <Compile Include="SqlScriptObjects\References\RepositorySqlScriptObject.cs" />
+    <Compile Include="SqlScriptObjects\RoleManager\RoleManagerSqlScriptObject.cs" />
+    <Compile Include="SqlScriptObjects\Settings\SettingsSqlScriptObject.cs" />
+    <Compile Include="SqlScriptObjects\SwitchClient\SwitchClientSqlScriptObject.cs" />
+    <Compile Include="SqlScriptObjects\User\UserSqlScriptObjects.cs" />
+    <Compile Include="Support\Common\CalenderPage.cs" />
+    <Compile Include="Support\Common\Constants\NewStringFormatter.cs" />
+    <Compile Include="Support\Common\JsonParser.cs" />
+    <Compile Include="Support\Common\SideWindow.cs" />
+    <Compile Include="Support\Common\Constants\StringFormatter.cs" />
+    <Compile Include="Support\Common\Constants\TestEnvironment.cs" />
+    <Compile Include="Support\Common\Constants\UserType.cs" />
+    <Compile Include="Support\Common\FileUploadPage.cs" />
+    <Compile Include="Support\Common\NewPagination.cs" />
+    <Compile Include="Support\Common\NotePage.cs" />
+    <Compile Include="Support\Common\PaginationPage.cs" />
+    <Compile Include="Support\Common\PaginationService.cs" />
+    <Compile Include="Support\Common\QuickSearch.cs" />
+    <Compile Include="Support\Common\SearchFilter.cs" />
+    <Compile Include="Support\Common\SideBarPanelSearch.cs" />
+    <Compile Include="Support\Common\StandardGridFunctionalityService.cs" />
+    <Compile Include="Support\Common\StandardGridFunctionalityPage.cs" />
+    <Compile Include="Support\Common\SwitchClientSection.cs" />
+    <Compile Include="Support\Enum\DashboardEnum.cs" />
+    <Compile Include="Support\Enum\GreetingUserMenuEnum.cs" />
+    <Compile Include="Support\Enum\HelpCenterEnum.cs" />
+    <Compile Include="Support\Enum\LoginEnum.cs" />
+    <Compile Include="Support\Enum\NewUserAccountEnum.cs" />
+    <Compile Include="Support\Enum\StatusEnum.cs" />
+    <Compile Include="Support\Enum\AppealEnum.cs" />
+    <Compile Include="Support\Enum\AuthorityEnum.cs" />
+    <Compile Include="Support\Enum\BatchEnum.cs" />
+    <Compile Include="Support\Enum\ClaimEnum.cs" />
+    <Compile Include="Support\Enum\PreAuthEnum.cs" />
+    <Compile Include="Support\Enum\ProviderScoreEnum.cs" />
+    <Compile Include="Support\Enum\ClientEnum.cs" />
+    <Compile Include="Support\Enum\ClientProfileEnum.cs" />
+    <Compile Include="Support\Enum\PageHeaderEnum.cs" />
+    <Compile Include="Support\Enum\PageTitleEnum.cs" />
+    <Compile Include="Support\Enum\PageUrlEnum.cs" />
+    <Compile Include="Support\Enum\ProductEnum.cs" />
+    <Compile Include="Support\Enum\ProviderEnum.cs" />
+    <Compile Include="Support\Enum\RestrictionEnum.cs" />
+    <Compile Include="Support\Enum\RolesEnum.cs" />
+    <Compile Include="Support\Enum\ScoreBandEnum.cs" />
+    <Compile Include="Support\Enum\SettingsEnum.cs" />
+    <Compile Include="Support\Enum\UserProfileSettingsEnum.cs" />
+    <Compile Include="Support\Environment\EnvironmentManager.cs" />
+    <Compile Include="Support\Common\GridViewSection.cs" />
+    <Compile Include="Support\Environment\NewEnvironmentManager.cs" />
+    <Compile Include="Support\Menu\HeaderMenu.cs" />
+    <Compile Include="Support\Menu\Mouseover.cs" />
+    <Compile Include="Support\Menu\SubMenu.cs" />
+    <Compile Include="PageObjects\QuickLaunch\QuickLaunchPageObjects.cs" />
+    <Compile Include="PageServices\Base\BasePageService.cs" />
+    <Compile Include="PageServices\Base\IPageService.cs" />
+    <Compile Include="PageServices\Login\LoginPage.cs" />
+    <Compile Include="PageObjects\Login\LoginPageObjects.cs" />
+    <Compile Include="PageServices\QuickLaunch\QuickLaunchPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartNucleus.cs" />
+    <Compile Include="Support\Utils\ExcelReader.cs" />
+    <Compile Include="Support\Utils\Extensions.cs" />
+    <Compile Include="Support\Utils\IEDownloadHelper.cs" />
+    <Compile Include="Support\Utils\InputValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\UIAutomationFramework\UIAutomation.Framework\UIAutomation.Framework.csproj">
+      <Project>{DD4264B2-7027-4CEF-A855-5990BEDA9C52}</Project>
+      <Name>UIAutomation.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PageServices\Claim\OriginalClaimDataPage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

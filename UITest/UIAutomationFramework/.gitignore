@@ -1,0 +1,11 @@
+UIAutomation.Framework/obj/*
+Nucleus.UIAutomation.TestSuites/obj/*
+_ReSharper.UIAutomation/*
+AppConfigModifierTool/*
+UIAutomation.Build/*
+UIAutomation.References/*
+*.suo
+
+
+
+

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD4264B2-7027-4CEF-A855-5990BEDA9C52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UIAutomation.Framework</RootNamespace>
+    <AssemblyName>UIAutomation.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/UIAutomation.Framework/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LegacyDBQA|AnyCPU'">
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\..\Nucleus.UIAutomation\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Edge.SeleniumTools">
+      <HintPath>..\UIAutomation.References\Microsoft.Edge.SeleniumTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\UIAutomation.References\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\UIAutomation.References\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\UIAutomation.References\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\UIAutomation.References\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\UIAutomation.References\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Constants\ScriptConstants.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\FindsByAttribute.cs" />
+    <Compile Include="Core\Base\NewPageBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Base\PageBase.cs" />
+    <Compile Include="Core\Driver\BrowserOptions.cs" />
+    <Compile Include="Core\Driver\ClearElement.cs" />
+    <Compile Include="Core\Driver\IBrowserOptions.cs" />
+    <Compile Include="Core\Driver\Isitedriver.cs" />
+    <Compile Include="Core\Driver\NewBrowserOptions.cs" />
+    <Compile Include="Core\Driver\NewSiteDriver.cs" />
+    <Compile Include="Core\Driver\ScreenshotRemoteWebDriver.cs" />
+    <Compile Include="Core\Log\ILog.cs" />
+    <Compile Include="Core\Log\Logger.cs" />
+    <Compile Include="Core\Navigation\INavigator.cs" />
+    <Compile Include="Core\Navigation\Navigator.cs" />
+    <Compile Include="Core\Process\IProcessObject.cs" />
+    <Compile Include="Core\Process\ProcessConnection.cs" />
+    <Compile Include="Core\Process\ProcessLocal.cs" />
+    <Compile Include="Core\Process\ProcessMethod.cs" />
+    <Compile Include="Core\Process\ProcessRemote.cs" />
+    <Compile Include="Core\Service\Controller.cs" />
+    <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\IDatabaseConnection.cs" />
+    <Compile Include="Database\IOracleStatementExecutor.cs" />
+    <Compile Include="Database\NewDatabaseConnection.cs" />
+    <Compile Include="Database\NewOracleStatementExecutor.cs" />
+    <Compile Include="Data\AutomationData.cs">
+      <DependentUpon>AutomationData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AutomationMapping.cs">
+      <DependentUpon>AutomationMapping.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Database\OracleStatementExecutor.cs" />
+    <Compile Include="Elements\CustomButton.cs" />
+    <Compile Include="Elements\Div.cs" />
+    <Compile Include="Elements\IProxyWebElement.cs" />
+    <Compile Include="Elements\MultiSelectField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Elements\Section.cs" />
+    <Compile Include="Elements\SelectComboBox.cs" />
+    <Compile Include="Elements\ImageButton.cs" />
+    <Compile Include="Elements\InputButton.cs" />
+    <Compile Include="Elements\IElement.cs" />
+    <Compile Include="Elements\RadioButton.cs" />
+    <Compile Include="Elements\Table.cs" />
+    <Compile Include="Elements\TextArea.cs" />
+    <Compile Include="Data\DataParser.cs" />
+    <Compile Include="Core\Driver\PageFactory.cs" />
+    <Compile Include="Core\Navigation\INewNavigator.cs" />
+    <Compile Include="Core\Navigation\NewNavigator.cs" />
+    <Compile Include="Core\Driver\SiteDriver.cs" />
+    <Compile Include="Common\Constants\BrowserConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Elements\BaseElement.cs" />
+    <Compile Include="Elements\CheckBox.cs" />
+    <Compile Include="Elements\Link.cs" />
+    <Compile Include="Elements\SelectField.cs" />
+    <Compile Include="Elements\TextField.cs" />
+    <Compile Include="Elements\TextLabel.cs" />
+    <Compile Include="Utils\EmailReader.cs" />
+    <Compile Include="Utils\ExcelReader.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\IJavaScriptExecutors.cs" />
+    <Compile Include="Utils\InputValidation.cs" />
+    <Compile Include="Utils\JavaScriptExecutor.cs" />
+    <Compile Include="Core\Driver\SiteDriverException.cs" />
+    <Compile Include="Utils\JavaScriptExecutorsNew.cs" />
+    <Compile Include="Utils\NetworkConnection.cs" />
+    <Compile Include="Utils\Performance.cs" />
+    <Compile Include="Utils\SortingAlgorithm.cs" />
+    <Compile Include="Utils\StringValue.cs" />
+    <Compile Include="Utils\TaskManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Executables\chromedriver.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Executables\geckodriver.exe" />
+    <Content Include="Executables\IEDriverServer.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Executables\msedgedriver.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PsTools\PsExec.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\AutomationData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\AutomationMapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

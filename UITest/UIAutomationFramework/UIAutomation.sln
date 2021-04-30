@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIAutomation.Framework", "UIAutomation.Framework\UIAutomation.Framework.csproj", "{DD4264B2-7027-4CEF-A855-5990BEDA9C52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LegacyDBQA|Any CPU = LegacyDBQA|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.LegacyDBQA|Any CPU.ActiveCfg = LegacyDBQA|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.LegacyDBQA|Any CPU.Build.0 = LegacyDBQA|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4264B2-7027-4CEF-A855-5990BEDA9C52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

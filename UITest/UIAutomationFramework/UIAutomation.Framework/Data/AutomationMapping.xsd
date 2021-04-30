@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Mappings" targetNamespace="http://www.hcinsight.net/AutomationMapping.xsd" xmlns:mstns="http://www.hcinsight.net/AutomationMapping.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hcinsight.net/AutomationMapping.xsd" elementFormDefault="qualified">
+  <xs:element name="Mappings" type="Mappings">
+  <xs:unique name="UMappings">
+    <xs:selector xpath="mstns:FullyQualifiedClass"/>
+    <xs:field xpath="@Name"/>
+  </xs:unique>
+  </xs:element>
+  
+  <xs:complexType name="Mappings">
+    <xs:sequence>
+      <xs:element name="FullyQualifiedClass" type="FullyQualifiedClass" minOccurs="1" maxOccurs="unbounded">
+        <xs:unique name="UFullyQualifiedClassName">
+          <xs:selector xpath="."/>
+          <xs:field xpath="@Name"/>
+        </xs:unique>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>  
+  
+  <xs:complexType name="FullyQualifiedClass">
+    <xs:sequence>
+      <xs:element name="Mapping" type ="Mapping" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+        <xs:attribute name="Name" use="required" type="xs:string"/>
+  </xs:complexType>  
+  
+  <xs:complexType name="Mapping">
+    <xs:sequence>
+      <xs:element name="Parameters" type="Parameters" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="Name" use="required" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Parameters">
+    <xs:sequence>
+      <xs:element name="Param" type="Param" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>  
+  
+  <xs:complexType name="Param">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="Name" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>    
+</xs:schema>

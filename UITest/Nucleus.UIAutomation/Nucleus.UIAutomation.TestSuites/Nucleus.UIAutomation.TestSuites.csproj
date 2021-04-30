@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{592AF626-CF38-490E-914C-53054052A72E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nucleus.UIAutomation.TestSuites</RootNamespace>
+    <AssemblyName>Nucleus.UIAutomation.TestSuites</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Nucleus.UIAutomation.TestSuites/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\UIAutomationFramework\UIAutomation.Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LegacyDBQA|AnyCPU'">
+    <OutputPath>bin\LegacyDBQA\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Edge.SeleniumTools, Version=3.141.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Edge.SeleniumTools.3.141.2\lib\net45\Microsoft.Edge.SeleniumTools.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unity.Abstractions, Version=5.11.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\AutomatedBaseParallelRun.cs" />
+    <Compile Include="Base\AutomatedBaseClient.cs" />
+    <Compile Include="Base\AutomatedBaseClientParallel.cs" />
+    <Compile Include="Base\NewAutomatedBase.cs" />
+    <Compile Include="Base\PaginationTests.cs" />
+    <Compile Include="Base\RetryingAttribute.cs" />
+    <Compile Include="Base\RetryingCommand.cs" />
+    <Compile Include="Base\TestExtensions.cs" />
+    <Compile Include="BootStrapper.cs" />
+    <Compile Include="Common\CommonValidations.cs" />
+    <Compile Include="DependencyInjector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases\AppealAction.cs" />
+    <Compile Include="TestCases\AppealAction2.cs" />
+    <Compile Include="TestCases\AppealCategoryManager.cs" />
+    <Compile Include="TestCases\AppealCreator.cs" />
+    <Compile Include="TestCases\AppealManager.cs" />
+    <Compile Include="TestCases\AppealSummary.cs" />
+    <Compile Include="TestCases\ApplicationNavigationSmokeTestParallel.cs" />
+    <Compile Include="TestCases\ApplicationNavigationSmokeTest.cs" />
+    <Compile Include="TestCases\ClaimViewRestriction.cs" />
+    <Compile Include="TestCases\ClientUser\ApplicationNavigationSmokeTestClient.cs" />
+    <Compile Include="TestCases\ClientUser\COBClaimDetailsClient.cs" />
+    <Compile Include="TestCases\ClientUser\COBDashboardClient.cs" />
+    <Compile Include="TestCases\ClientUser\FFPDashboardClient.cs" />
+    <Compile Include="TestCases\ClientUser\HelpCenterClient.cs" />
+    <Compile Include="TestCases\ClientUser\MyProfileClient.cs" />
+    <Compile Include="TestCases\ClientUser\LoginClient.cs" />
+    <Compile Include="TestCases\ClientUser\ClaimProcessingHistoryClient.cs" />
+    <Compile Include="TestCases\ClientUser\BatchSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\BatchSummaryClient.cs" />
+    <Compile Include="TestCases\ClientUser\InvoiceSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\LogicSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\PatientClaimHistoryClient.cs" />
+    <Compile Include="TestCases\ClientUser\PreAuthActionClient.cs" />
+    <Compile Include="TestCases\ClientUser\PreAuthCreator.cs" />
+    <Compile Include="TestCases\ClientUser\PreAuthSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\ProviderClaimSearchClient.cs" />
+    <Compile Include="TestCases\COBDashboard.cs" />
+    <Compile Include="TestCases\COBClaimsDetail.cs" />
+    <Compile Include="TestCases\EditSettingsManager.cs" />
+    <Compile Include="TestCases\MicrostrategyMaintenance.cs" />
+    <Compile Include="TestCases\ClientUser\MicrostrategyClient.cs" />
+    <Compile Include="TestCases\Microstrategy.cs" />
+    <Compile Include="TestCases\ClientUser\ClaimActionClient2.cs" />
+    <Compile Include="TestCases\ClientUser\ProviderSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\SuspectProvidersClient.cs" />
+    <Compile Include="TestCases\MyDashboard.cs" />
+    <Compile Include="TestCases\MyProfile.cs" />
+    <Compile Include="TestCases\ClaimProcessingHistory.cs" />
+    <Compile Include="TestCases\BatchSearch.cs" />
+    <Compile Include="TestCases\BatchSummary.cs" />
+    <Compile Include="TestCases\InvoiceSearch.cs" />
+    <Compile Include="TestCases\LogicSearch.cs" />
+    <Compile Include="TestCases\ClientSearch.cs" />
+    <Compile Include="TestCases\PreAuthAction.cs" />
+    <Compile Include="TestCases\UserProfileSearch.cs" />
+    <Compile Include="TestCases\PreAuthSearch.cs" />
+    <Compile Include="TestCases\ProviderClaimSearch.cs" />
+    <Compile Include="TestCases\ReferenceManager.cs" />
+    <Compile Include="TestCases\RepositoryReference.cs" />
+    <Compile Include="TestCases\ClientUser\ClaimViewRestrictionClient.cs" />
+    <Compile Include="TestCases\ProviderSearch.cs" />
+    <Compile Include="TestCases\AppealRationaleManager.cs" />
+    <Compile Include="TestCases\ClientUser\AppealCreatorClient.cs" />
+    <Compile Include="TestCases\ClientUser\AppealSummaryClient.cs" />
+    <Compile Include="TestCases\ClientUser\DashboardClient.cs" />
+    <Compile Include="TestCases\ClientUser\DashboardClientAppealsDetail.cs" />
+    <Compile Include="TestCases\ClientUser\DashboardClientClaimsDetail.cs" />
+    <Compile Include="TestCases\ClientUser\DashboardClientLogicRequestsDetails.cs" />
+    <Compile Include="TestCases\ClientUser\AppealSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\ClaimSearchClient.cs" />
+    <Compile Include="TestCases\ClientUser\ProviderActionClient.cs" />
+    <Compile Include="TestCases\DashboardAppealsDetail.cs" />
+    <Compile Include="TestCases\Claim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestCases\ClaimAction1.cs" />
+    <Compile Include="TestCases\ClientUser\ClaimActionClient.cs" />
+    <Compile Include="TestCases\ClientUser\NucleusHomeClient.cs" />
+    <Compile Include="TestCases\ClientUser\SettingsClient.cs" />
+    <Compile Include="TestCases\ClientUser\WorklistClient.cs" />
+    <Compile Include="TestCases\Dashboard.cs" />
+    <Compile Include="TestCases\DashboardClaimsDetail.cs" />
+    <Compile Include="TestCases\DashboardLogicRequestDetails.cs" />
+    <Compile Include="TestCases\FFPDashboard.cs" />
+    <Compile Include="TestCases\FFPDashboardClaimsDetail.cs" />
+    <Compile Include="TestCases\HelpCenter.cs" />
+    <Compile Include="TestCases\Login.cs" />
+    <Compile Include="TestCases\MaintenanceNotices.cs" />
+    <Compile Include="TestCases\AppealSearch.cs" />
+    <Compile Include="TestCases\ClaimAction.cs" />
+    <Compile Include="TestCases\ClaimAction2.cs" />
+    <Compile Include="TestCases\ClaimAction3.cs" />
+    <Compile Include="TestCases\ClaimAction4.cs" />
+    <Compile Include="TestCases\ClaimSearch.cs" />
+    <Compile Include="TestCases\PAndCClientGroup.cs" />
+    <Compile Include="TestCases\PatientClaimHistory.cs" />
+    <Compile Include="TestCases\ProviderAction.cs" />
+    <Compile Include="TestCases\PerformanceTest.cs" />
+    <Compile Include="TestCases\ProviderProfile.cs" />
+    <Compile Include="TestCases\QAAppealSearch.cs" />
+    <Compile Include="TestCases\QAClaimSearch.cs" />
+    <Compile Include="TestCases\QAManager.cs" />
+    <Compile Include="TestCases\NucleusHome.cs" />
+    <Compile Include="TestCases\RoleManager.cs" />
+    <Compile Include="TestCases\Settings.cs" />
+    <Compile Include="TestCases\SuspectProviders.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Documents\InvalidName.xlsx" />
+    <None Include="Documents\SMTST.xlsx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Dev.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\Dev3.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\Mapping.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\QA.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\QARel.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\UAT.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_CVTY.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_CVTY_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_PEHP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_PEHP_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_TTREE.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\logo_TTREE_black.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\performance stylesheet.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Test 5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Test 4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Test 3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Test 2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documents\Test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\UIAutomationFramework\UIAutomation.Framework\UIAutomation.Framework.csproj">
+      <Project>{dd4264b2-7027-4cef-a855-5990beda9c52}</Project>
+      <Name>UIAutomation.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nucleus.Service\Nucleus.Service.csproj">
+      <Project>{2158f34f-2d18-41e0-b6d7-1ed95ef7cb13}</Project>
+      <Name>Nucleus.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

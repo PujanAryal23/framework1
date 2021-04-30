@@ -1,0 +1,9 @@
+Legacy.Service/bin/*
+Legacy.Service/obj/*
+Legacy.UIAutomation.TestSuites/obj/*
+_ReSharper.Legacy.UIAutomation/*
+*.suo
+
+
+
+

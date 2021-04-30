@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{228A487D-7191-48AD-90C4-0C459450F4C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Legacy.Service</RootNamespace>
+    <AssemblyName>Legacy.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\UIAutomationFramework\UIAutomation.Build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'LegacyDBQA|AnyCPU'">
+    <OutputPath>..\UIAutomation.Build\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomation.Framework">
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.Build\UIAutomation.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="VH.EncryptionBusiness, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\UIAutomationFramework\UIAutomation.References\VH.EncryptionBusiness.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="PageObjects\Common\NotifyClientPageObjects.cs" />
+    <Compile Include="PageObjects\Default\DefaultPageObjects.cs" />
+    <Compile Include="PageObjects\FFP\BatchListPageObjects.cs" />
+    <Compile Include="PageObjects\FFP\BatchStatisticsReportPageObjects.cs" />
+    <Compile Include="PageObjects\FFP\ClaimHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\FFP\FlaggedClaimPageObjects.cs" />
+    <Compile Include="PageObjects\Invoicing\InvoicingPageObjects.cs" />
+    <Compile Include="PageObjects\Negotiation\NegotiationPageObjects.cs" />
+    <Compile Include="PageObjects\Password\ChangePasswordPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\PCI\ClosedPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\ClosedPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\ConsultCompletePageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\ConsultRequiredPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\HCIConsultCompletePageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\HCIConsultRequiredPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DocumentReviewPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\LogicRequestsPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\PCI\SearchPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\PendedPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\PreAuthPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\DCI\SearchPageObjects.cs" />
+    <Compile Include="PageObjects\Pre-Authorizations\UnreviewedPageObjects.cs" />
+    <Compile Include="PageObjects\Product\BatchStatisticsReportPageObjects.cs" />
+    <Compile Include="PageObjects\Common\CalendarPageObjects.cs" />
+    <Compile Include="PageObjects\Product\ClaimHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Product\ClaimSummaryPageObjects.cs" />
+    <Compile Include="PageObjects\Product\CodeDescriptionPageObjects.cs" />
+    <Compile Include="PageObjects\Product\DocClaimListPageObjects.cs" />
+    <Compile Include="PageObjects\Product\DocumentUploadPageObjects.cs" />
+    <Compile Include="PageObjects\Product\FlaggedClaimPageObjects.cs" />
+    <Compile Include="PageObjects\FFP\FraudFinderProPageObjects.cs" />
+    <Compile Include="PageObjects\Product\LogicRequestsPageObjects.cs" />
+    <Compile Include="PageObjects\Product\ModifiedEditsPageObjects.cs" />
+    <Compile Include="PageObjects\Product\OriginalDataPageObjects.cs" />
+    <Compile Include="PageObjects\Product\RevDescriptionPageObjects.cs" />
+    <Compile Include="PageObjects\Product\SearchClearedPageObjects.cs" />
+    <Compile Include="PageObjects\Product\SearchPendedPageObjects.cs" />
+    <Compile Include="PageObjects\Product\PreAuthorizationSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Product\ProductPageObjects.cs" />
+    <Compile Include="PageObjects\Product\ProviderAppealPageObjects.cs" />
+    <Compile Include="PageObjects\Product\PatientHistoryPageObjects.cs" />
+    <Compile Include="PageObjects\Product\SearchProductPageObjects.cs" />
+    <Compile Include="PageObjects\Product\SearchUnreviewedPageObjects.cs" />
+    <Compile Include="PageObjects\Rationale\RationalePageObjects.cs" />
+    <Compile Include="PageObjects\Rationale\ViewRationalePageObjects.cs" />
+    <Compile Include="PageObjects\Reports\ReportsAndEventsPageObjects.cs" />
+    <Compile Include="PageObjects\Search\SearchPageObjects.cs" />
+    <Compile Include="PageServices\ATS\AtsPage.cs" />
+    <Compile Include="PageServices\ATS\AtsSearchPage.cs" />
+    <Compile Include="PageServices\Base\BasePageService.cs" />
+    <Compile Include="PageServices\Common\NotifyClientPage.cs" />
+    <Compile Include="PageServices\FFP\BatchListPage.cs" />
+    <Compile Include="PageServices\FFP\BatchStatisticsReportPage.cs" />
+    <Compile Include="PageServices\FFP\ClaimHistoryPage.cs" />
+    <Compile Include="PageServices\FFP\FlaggedClaimPage.cs" />
+    <Compile Include="PageServices\Invoicing\InvoicingPage.cs" />
+    <Compile Include="PageServices\Negotiation\NegotiationPage.cs" />
+    <Compile Include="PageServices\Password\ChangePasswordPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\PCI\ClosedPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\ClosedPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\ConsultCompletePage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\ConsultRequiredPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\HCIConsultCompletePage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\HCIConsultRequiredPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DocumentReviewPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\LogicRequestsPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\PCI\SearchPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\PendedPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\PreAuthPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\DCI\SearchPage.cs" />
+    <Compile Include="PageServices\Pre-Authorizations\UnreviewedPage.cs" />
+    <Compile Include="PageServices\Product\BatchListPage.cs" />
+    <Compile Include="PageServices\Default\DefaultPage.cs" />
+    <Compile Include="PageServices\Product\BatchStatisticsReportPage.cs" />
+    <Compile Include="PageServices\Product\ClaimHistoryPage.cs" />
+    <Compile Include="PageServices\Product\ClaimSummaryPage.cs" />
+    <Compile Include="PageServices\Product\CodeDescriptionPage.cs" />
+    <Compile Include="PageServices\Product\DentalClaimInsightPage.cs" />
+    <Compile Include="PageServices\Product\DocClaimListPage.cs" />
+    <Compile Include="PageServices\Product\DocumentUploadPage.cs" />
+    <Compile Include="PageServices\Product\FacilityClaimInsightPage.cs" />
+    <Compile Include="PageServices\Base\IPageService.cs" />
+    <Compile Include="PageServices\Login\LoginPage.cs" />
+    <Compile Include="PageServices\Negotiation\ClientMonitorPage.cs" />
+    <Compile Include="PageServices\Product\FlaggedClaimPage.cs" />
+    <Compile Include="PageServices\FFP\FraudFinderProPage.cs" />
+    <Compile Include="PageServices\Product\LogicRequestsPage.cs" />
+    <Compile Include="PageServices\Product\ModifiedEditsPage.cs" />
+    <Compile Include="PageServices\Product\OncologyClaimInsightPage.cs" />
+    <Compile Include="PageServices\Product\OriginalDataPage.cs" />
+    <Compile Include="PageServices\Product\PatientHistoryPage.cs" />
+    <Compile Include="PageServices\Product\PhysicianClaimInsightPage.cs" />
+    <Compile Include="PageObjects\Product\BatchListPageObjects.cs" />
+    <Compile Include="PageObjects\Product\DentalClaimInsightPageObjects.cs" />
+    <Compile Include="PageObjects\Product\FacilityClaimInsightPageObjects.cs" />
+    <Compile Include="PageObjects\Product\OncologyClaimInsightPageObjects.cs" />
+    <Compile Include="PageObjects\Product\PhysicianClaimInsightPageObjects.cs" />
+    <Compile Include="PageServices\Product\PreAuthorizationSearchPage.cs" />
+    <Compile Include="PageServices\Product\ProductPage.cs" />
+    <Compile Include="PageServices\Product\ProviderAppealPage.cs" />
+    <Compile Include="PageServices\Product\RevDescriptionPage.cs" />
+    <Compile Include="PageServices\Product\SearchClearedPage.cs" />
+    <Compile Include="PageServices\Product\SearchPendedPage.cs" />
+    <Compile Include="PageServices\Product\SearchProductPage.cs" />
+    <Compile Include="PageServices\Product\SearchUnreviewedPage.cs" />
+    <Compile Include="PageServices\Rationale\RuleRationalePage.cs" />
+    <Compile Include="PageServices\Rationale\ViewRationalePage.cs" />
+    <Compile Include="PageServices\Reports\ReportsAndEventsPage.cs" />
+    <Compile Include="PageServices\Search\SearchPage.cs" />
+    <Compile Include="StartLegacy.cs" />
+    <Compile Include="PageServices\Welcome\WelcomePage.cs" />
+    <Compile Include="PageObjects\ATS\AtsPageObjects.cs" />
+    <Compile Include="PageObjects\ATS\AtsSearchPageObjects.cs" />
+    <Compile Include="PageObjects\Login\LoginPageObjects.cs" />
+    <Compile Include="PageObjects\Negotiation\ClientMonitorPageObjects.cs" />
+    <Compile Include="PageObjects\Welcome\WelcomePageObjects.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\Constants\TestEnvironment.cs" />
+    <Compile Include="Support\Enum\DocumentTypeEnum.cs" />
+    <Compile Include="Support\Common\Constants\StringFormatter.cs" />
+    <Compile Include="Support\Enum\FraudFinderProPageUrlEnum.cs" />
+    <Compile Include="Support\Enum\MedicalPreAuthPageUrlEnum.cs" />
+    <Compile Include="Support\Enum\PageTitleEnum.cs" />
+    <Compile Include="Support\Enum\PageUrlEnum.cs" />
+    <Compile Include="Support\Enum\ProductEnum.cs" />
+    <Compile Include="Support\Enum\ProductPageUrlEnum.cs" />
+    <Compile Include="Support\Environment\EnvironmentManager.cs" />
+    <Compile Include="Support\Utils\Extensions.cs" />
+    <Compile Include="Support\Utils\SortingAlgorithm.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
